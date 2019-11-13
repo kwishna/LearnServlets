@@ -1,0 +1,38 @@
+Tomcat Converts JSP To Servlet. 
+
+We Don't Need To Write HttpServletRequest Or HttpServletResponse Object. All These Are Provided By Default In JSP. So,
+It Is Easy To Work With JSP.
+In Servlet, We Need To Create A Class, Extend HttpServlet, Then Methods Like doGet, doPost etc. And Pass Request & Response Parameter Into It.
+Then We Need To Create PrintWriter. 
+j 
+How JSP Is Converted Into Servlet By TomCat :-
+1) demo.jsp file Name -> Converted To demo_jsp Class extends HttpServlet.
+2) The Code Inside <% %> Tag Is Copied Into -> service(Req, Res) Method Of demojsp Class. (<% %> Is Called Scriptlet)
+3) The Code Which Is Inside <%! %> Tag Is Copied Into -> Above The Service(Req, Res) Method. (Say, Declaration Section)
+4) <%@page import="java.util.Date", "java.util.List" %> -> This Goes To import Package Place. (Directive)
+5) <%= k %> -> This Goes To out.println(k); (Expression)
+
+Syntax :
+<%@ page attribute="value" session="true | false" %>
+<%@ include file="something.jsp" %> : We Can Attach Another Files Using This.
+<%@ taglib url="url" prefix="something" %> : We Can Attach Another Libraries For Tag. User Defined Tags
+
+MVC -- Model View Controller
+Model Means "Any POJO (Plain Old Java Object) Class. Which Has All The Operations Like DB Connection"
+View Means "JSP. JSP Provides The View Using HTML. The Data Inside It Is Provided By Controller"
+Controller Means "Servlet. Servlet Has The Methods. It Serves The Client Request. Provides Data Into View With The Help Of Model"
+
+JSP Provides Following Built-In Objects. Can Be Used Directly.
+a) request (HttpServletRequest)
+b) response (HttpServletResponse)
+c) pageContext (PageContext)
+d) out (JspWriter) ~ PrintWriter Object
+e) session (HttpSession)
+f) application (ServletContext)
+g) config (ServletConfig)
+
+How To Handle The Exception Or Error In JSP :-
+We Can Use try catch In JSP. But, It Is Not Good For Many Reasons.
+We Will Create A Separate Page For Error. Called errorPage. We Will Put errorPage="error.jsp" Inside <%@ %> Tag.
+Similarly, We Will Write isErrorPage="true" Inside <%@ %> Tag In error.jsp File. So That It Understand The Error.
+Then Write <%= exception %> In error.jsp

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd" id="WebApp_ID" version="4.0">
+  <display-name>LearnServlet</display-name>
+ <!-- <welcome-file-list>
+    <welcome-file>index.html</welcome-file>
+    <welcome-file>index.htm</welcome-file>
+    <welcome-file>index.jsp</welcome-file>
+    <welcome-file>default.html</welcome-file>
+    <welcome-file>default.htm</welcome-file>
+    <welcome-file>default.jsp</welcome-file>
+  </welcome-file-list>  COMMENTED -->
+  <!--  
+  <servlet>
+  	<servlet-name>abc</servlet-name>
+  	<servlet-class>com.servlet.AddServlet</servlet-class>
+  	
+  	<init-param>Parameter For A Particular Servlet. Accessed Using ServletConfig Object
+  		<param-name>name</param-name>
+  		<param-value>Krishna</param-value>
+  	</init-param>
+  </servlet>
+  
+  <servlet-mapping>
+  	<servlet-name>abc</servlet-name>
+  	<url-pattern>/add</url-pattern>
+  </servlet-mapping>
+  
+  <servlet> Registering A Servlet	
+  	<servlet-name>pqr</servlet-name>
+  	<servlet-class>com.servlet.SqServlet</servlet-class>
+  </servlet>
+  
+  <servlet-mapping> Mapping URL Resource To Servlet
+  	<servlet-name>pqr</servlet-name>
+  	<url-pattern>/sq</url-pattern>
+  </servlet-mapping>
+  
+  <context-param>This Parameter Will Be Available To All The Servlets. Accessed Using ServletContext Object
+  	<param-name>phone</param-name>
+  	<param-value>Iphone</param-value>
+  </context-param> -->
+  
+</web-app> 
